@@ -32,8 +32,9 @@ function longestSentence(text) {
   const wordCount = sentence => sentence.split(' ').length;
   let sentences = text.match(/\S[^\.\?!]*[\.\?!]/g);
   sentences.sort((a, b) => wordCount(b) - wordCount(a)); // Sorts in descending order by word count.
-  console.log(sentences[0]);
-  console.log(`\nThe longest sentence has ${wordCount(sentences[0])} words.`);
+  const longest = sentences[0];
+  console.log(longest);
+  console.log(`\nThe longest sentence has ${wordCount(longest)} words.`);
 }
 
 
